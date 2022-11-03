@@ -22,9 +22,6 @@ target_include_directories("${NAME}" PUBLIC "${DPF_ROOT_DIR}/distrho")
 target_include_directories("${NAME}" PUBLIC "${DPF_ROOT_DIR}/dgl")
 target_include_directories("${NAME}" PUBLIC "${PROJECT_SOURCE_DIR}/dpf-widgets/opengl")
 
-#target_include_directories(MyPlugin
-  #PUBLIC src)
-
 target_link_libraries("${NAME}" PRIVATE dgl-opengl)
 target_link_libraries("${NAME}" PUBLIC dgl-opengl-definitions dgl-system-libs-definitions)
 
@@ -34,13 +31,3 @@ endif()
 if(MINGW)
     target_link_libraries("${NAME}" PRIVATE "-static")
 endif()
-
-#dgl-opengl
-
-#dpf_add_plugin(MyPlugin
-  #TARGETS lv2 vst2 vst3
-  #UI_TYPE opengl
-  #FILES_DSP
-      #src/MyPlugin.cpp
-  #FILES_UI
-      #src/MyUI.cpp)
