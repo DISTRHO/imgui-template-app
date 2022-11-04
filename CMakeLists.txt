@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.7)
 
-set(NAME imgui-demo)
+set(NAME imgui-demo-app)
 project(${NAME})
 
 add_subdirectory(dpf)
